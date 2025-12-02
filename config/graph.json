@@ -1,0 +1,16 @@
+{
+  "graph": {
+    "enabled": false,
+    "max_steps": 50
+  },
+  "wm": {
+    "persist": true,
+    "arbitration": true,
+    "nudge": true
+  },
+  "motivation": {
+    "weight_success": 0.4,
+    "weight_affect": 0.4,
+    "weight_contradiction": 0.2
+  }
+}

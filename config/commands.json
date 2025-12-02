@@ -1,0 +1,79 @@
+{
+  "status": {
+    "handler": "status",
+    "description": "Report the current status of the autonomous agent including the number of goals and running state."
+  },
+  "cache": {
+    "description": "Cache operations",
+    "subcommands": {
+      "purge": {
+        "handler": "cache_purge",
+        "description": "Remove any persisted fast cache entries so that new answers are recomputed."
+      }
+    }
+  },
+  "input": {
+    "handler": "input",
+    "description": "Ingest an external file into the system.  This command is a placeholder and is not yet implemented."
+  },
+  "whoami": {
+    "handler": "whoami",
+    "description": "Generate a comprehensive self-introduction based on real introspection. Scans codebase, reads memory stats, checks active capabilities.",
+    "args": {
+      "detail_level": {
+        "type": "string",
+        "values": ["brief", "standard", "full"],
+        "default": "full",
+        "description": "Level of detail: brief (one sentence), standard (4 sentences), full (complete introduction)"
+      }
+    }
+  },
+  "introduce": {
+    "handler": "whoami",
+    "description": "Alias for whoami - generates dynamic self-introduction."
+  },
+  "scan": {
+    "description": "System scan operations",
+    "subcommands": {
+      "self": {
+        "handler": "scan_self",
+        "description": "Scan Maven's own system structure and status."
+      },
+      "memory": {
+        "handler": "scan_memory",
+        "description": "Check memory tier health across all brains."
+      }
+    }
+  },
+  "enable": {
+    "description": "Enable system features",
+    "subcommands": {
+      "execution": {
+        "handler": "enable_execution",
+        "description": "Enable full execution mode with user confirmation."
+      },
+      "read-only": {
+        "handler": "enable_read_only",
+        "description": "Enable read-only execution mode."
+      }
+    }
+  },
+  "disable": {
+    "description": "Disable system features",
+    "subcommands": {
+      "execution": {
+        "handler": "disable_execution",
+        "description": "Disable all execution capabilities."
+      }
+    }
+  },
+  "list": {
+    "description": "List system components",
+    "subcommands": {
+      "tools": {
+        "handler": "list_tools",
+        "description": "List all available tools and their capabilities."
+      }
+    }
+  }
+}

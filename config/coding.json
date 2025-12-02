@@ -1,0 +1,18 @@
+{
+  "executor": {
+    "time_limit_sec": 2,
+    "mem_limit_mb": 128,
+    "tmp_dir": "/tmp/maven_sandbox"
+  },
+  "allow_imports": [
+    "math",
+    "json",
+    "re",
+    "itertools",
+    "functools",
+    "datetime",
+    "statistics",
+    "fractions"
+  ],
+  "max_refine_loops": 3
+}

@@ -1,0 +1,97 @@
+{
+  "allowed_tasks": [
+    "search_memory",
+    "search_knowledge_graph",
+    "synthesize_findings",
+    "store_results",
+    "load_data",
+    "apply_analysis",
+    "generate_report",
+    "plan_creation",
+    "execute_creation",
+    "review_creation",
+    "python_exec",
+    "shell_exec",
+    "fs_read",
+    "fs_write",
+    "fs_list",
+    "fs_delete",
+    "fs_mkdir",
+    "git_status",
+    "git_diff",
+    "git_commit",
+    "git_push",
+    "git_pull",
+    "git_clone",
+    "git_branch",
+    "git_log",
+    "web_fetch",
+    "web_search",
+    "browser_open",
+    "browser_screenshot",
+    "browser_click",
+    "browser_type",
+    "agent_spawn",
+    "agent_execute"
+  ],
+  "shell_policy": {
+    "mode": "full_agency",
+    "deny_patterns": [
+      "rm -rf /",
+      "rm -rf /*",
+      "mkfs",
+      "dd if=/dev/zero of=/dev/",
+      "dd if=/dev/random of=/dev/",
+      "> /dev/sda",
+      "chmod -R 777 /",
+      ":(){:|:&};:",
+      "mv / /dev/null",
+      "shutdown -h now",
+      "init 0",
+      "init 6",
+      "halt",
+      "poweroff"
+    ],
+    "allow_pipes": true,
+    "allow_redirects": true,
+    "allow_chained_commands": true,
+    "allow_network_commands": true
+  },
+  "filesystem_policy": {
+    "mode": "unrestricted",
+    "allow_any_path": true,
+    "allow_write": true,
+    "allow_delete": true,
+    "deny_paths": [
+      "/dev/sd*",
+      "/dev/nvme*",
+      "/boot/",
+      "/proc/",
+      "/sys/"
+    ]
+  },
+  "python_policy": {
+    "mode": "unrestricted",
+    "allow_imports": true,
+    "allow_subprocess": true,
+    "allow_file_io": true,
+    "allow_network": true,
+    "timeout_ms": 60000,
+    "memory_limit_mb": 1024
+  },
+  "web_policy": {
+    "mode": "unrestricted",
+    "allow_any_domain": true,
+    "allow_post_requests": true,
+    "allow_authentication": true,
+    "rate_limit_per_minute": 60,
+    "timeout_ms": 30000
+  },
+  "agent_policy": {
+    "mode": "full_agency",
+    "allow_autonomous": true,
+    "allow_tool_chaining": true,
+    "max_concurrent_agents": 5,
+    "max_execution_time_ms": 300000
+  }
+}

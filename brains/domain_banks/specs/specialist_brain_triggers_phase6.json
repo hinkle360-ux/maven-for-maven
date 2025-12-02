@@ -1,0 +1,185 @@
+{
+  "specialist_triggers": {
+    "coder_brain": {
+      "trigger_conditions": [
+        {
+          "type": "intent",
+          "values": ["COMMAND", "REQUEST", "CODE_GENERATION"],
+          "description": "Trigger when user requests code generation or programming tasks"
+        },
+        {
+          "type": "keyword",
+          "values": ["code", "program", "function", "class", "script", "write code", "implement"],
+          "description": "Trigger on keywords indicating coding intent"
+        },
+        {
+          "type": "domain",
+          "values": ["programming", "software", "development"],
+          "description": "Trigger when domain is programming-related"
+        }
+      ],
+      "routing_logic": "memory_librarian should invoke coder_brain when COMMAND/REQUEST intent is detected AND query contains programming keywords",
+      "priority": 0.8
+    },
+
+    "committee_brain": {
+      "trigger_conditions": [
+        {
+          "type": "complexity",
+          "threshold": 0.7,
+          "description": "Trigger on high-complexity queries requiring multiple perspectives"
+        },
+        {
+          "type": "confidence",
+          "threshold_low": 0.3,
+          "threshold_high": 0.6,
+          "description": "Trigger when confidence is moderate (uncertain but not impossible)"
+        },
+        {
+          "type": "keyword",
+          "values": ["compare", "evaluate", "decide", "choose", "which is better"],
+          "description": "Trigger on comparative or decision-making queries"
+        }
+      ],
+      "routing_logic": "integrator_brain should invoke committee_brain when multiple competing responses exist or confidence is moderate",
+      "priority": 0.7
+    },
+
+    "imaginer_brain": {
+      "trigger_conditions": [
+        {
+          "type": "intent",
+          "values": ["HYPOTHESIZE", "EXPLAIN", "WHY", "HOW"],
+          "description": "Trigger on queries requiring hypothetical reasoning or explanation"
+        },
+        {
+          "type": "keyword",
+          "values": ["what if", "suppose", "imagine", "hypothetically", "could it be"],
+          "description": "Trigger on hypothetical phrasing"
+        },
+        {
+          "type": "mode",
+          "values": ["NO_EVIDENCE"],
+          "description": "Trigger when reasoning_brain has no evidence but question is valid"
+        }
+      ],
+      "routing_logic": "reasoning_brain should invoke imaginer_brain when verdict is UNKNOWN/UNANSWERED but query requires speculation",
+      "priority": 0.6
+    },
+
+    "peer_connection_brain": {
+      "trigger_conditions": [
+        {
+          "type": "explicit",
+          "values": ["ASK", "CONNECT", "DELEGATE"],
+          "description": "Only trigger on explicit peer connection operations"
+        },
+        {
+          "type": "context",
+          "field": "peer_id",
+          "description": "Trigger when context contains peer_id indicating multi-agent scenario"
+        }
+      ],
+      "routing_logic": "integrator_brain invokes peer_connection_brain only when explicitly requested or peer context exists",
+      "priority": 0.9
+    },
+
+    "environment_brain": {
+      "trigger_conditions": [
+        {
+          "type": "intent",
+          "values": ["LOCATION_QUERY"],
+          "description": "Trigger on location or environment queries"
+        },
+        {
+          "type": "keyword",
+          "values": ["where", "location", "environment", "surroundings"],
+          "description": "Trigger on environment-related keywords"
+        }
+      ],
+      "routing_logic": "language_brain should route location queries to environment_brain during PARSE stage",
+      "priority": 0.5
+    },
+
+    "hearing_brain": {
+      "trigger_conditions": [
+        {
+          "type": "input_type",
+          "values": ["audio", "sound"],
+          "description": "Trigger when input contains audio data"
+        },
+        {
+          "type": "explicit",
+          "values": ["ANALYZE_AUDIO"],
+          "description": "Only trigger on explicit audio analysis requests"
+        }
+      ],
+      "routing_logic": "sensorium_brain should invoke hearing_brain when audio input is detected",
+      "priority": 0.95
+    },
+
+    "vision_brain": {
+      "trigger_conditions": [
+        {
+          "type": "input_type",
+          "values": ["image", "visual"],
+          "description": "Trigger when input contains image data"
+        },
+        {
+          "type": "explicit",
+          "values": ["ANALYZE_IMAGE"],
+          "description": "Only trigger on explicit image analysis requests"
+        }
+      ],
+      "routing_logic": "sensorium_brain should invoke vision_brain when image input is detected",
+      "priority": 0.95
+    },
+
+    "replanner_brain": {
+      "trigger_conditions": [
+        {
+          "type": "plan_failure",
+          "description": "Trigger when a plan fails or encounters errors"
+        },
+        {
+          "type": "explicit",
+          "values": ["REPLAN"],
+          "description": "Trigger on explicit replan requests"
+        }
+      ],
+      "routing_logic": "planner_brain or integrator_brain should invoke replanner_brain when plan execution fails",
+      "priority": 0.85
+    },
+
+    "council_brain": {
+      "trigger_conditions": [
+        {
+          "type": "governance",
+          "description": "Trigger on governance or arbitration scenarios"
+        },
+        {
+          "type": "conflict",
+          "description": "Trigger when conflicting verdicts or decisions need resolution"
+        },
+        {
+          "type": "explicit",
+          "values": ["ARBITRATE"],
+          "description": "Only trigger on explicit arbitration requests"
+        }
+      ],
+      "routing_logic": "integrator_brain should invoke council_brain for high-stakes decisions or conflicts",
+      "priority": 0.75
+    }
+  },
+
+  "routing_summary": {
+    "description": "Specialist brains are invoked by routing logic in core brains (memory_librarian, integrator_brain, reasoning_brain) based on trigger conditions",
+    "deterministic_routing": true,
+    "notes": [
+      "All triggers are deterministic - same input always produces same routing decision",
+      "No time-based triggers",
+      "No randomness in routing logic",
+      "Priority values help integrator choose between multiple triggered specialists"
+    ]
+  }
+}

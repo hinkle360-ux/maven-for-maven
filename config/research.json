@@ -1,0 +1,10 @@
+{
+  "online_enabled": false,
+  "max_requests_per_job": 10,
+  "max_sources_per_subquestion": 3,
+  "max_subquestions": 8,
+  "allowed_domains": [],
+  "timeout_seconds": 30,
+  "user_agent": "Maven/2.0 Research Bot",
+  "max_page_chars": 8000
+}

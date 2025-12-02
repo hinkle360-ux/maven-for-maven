@@ -1,0 +1,48 @@
+{
+  "allowed": [
+    "action_engine",
+    "browser_tool",
+    "coder_brain",
+    "memory",
+    "reasoning",
+    "time_now",
+    "web_search",
+    "python_exec",
+    "shell",
+    "git",
+    "math",
+    "logic",
+    "table",
+    "filesystem",
+    "fs_tool",
+    "search_memory",
+    "search_knowledge_graph",
+    "synthesize_findings",
+    "store_results",
+    "load_data",
+    "apply_analysis",
+    "generate_report",
+    "plan_creation",
+    "execute_creation",
+    "review_creation"
+  ],
+  "denied": [
+    "delete_data"
+  ],
+  "limits": {
+    "search_memory": 100,
+    "search_knowledge_graph": 100,
+    "synthesize_findings": 50,
+    "store_results": 100,
+    "load_data": 50,
+    "apply_analysis": 50,
+    "generate_report": 20,
+    "plan_creation": 20,
+    "execute_creation": 20,
+    "review_creation": 20,
+    "web_search": 50,
+    "shell": 100,
+    "git": 100,
+    "python_exec": 50
+  }
+}

@@ -1,0 +1,12 @@
+# Maven Core Requirements
+# =======================
+#
+# These are the requirements for the Maven core brain system.
+# The core is designed to be stdlib-only, so this file should
+# ideally be empty or contain only optional development tools.
+#
+# Core brains do NOT require any external packages.
+# All external I/O is delegated to host_tools.
+
+# No external dependencies required for core brains.
+# The core uses only Python 3.11+ stdlib.

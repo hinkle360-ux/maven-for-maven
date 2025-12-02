@@ -1,0 +1,74 @@
+{
+  "seed_registry_version": "1.0.0",
+  "description": "Central registry for domain bank seed files. This is the single source of truth for seed file locations and bank mappings.",
+  "seed_directory": "brains/domain_banks/specs/data/seeds",
+  "runtime_directory": "brains/runtime_memory/domain_banks",
+  "seed_files": {
+    "science": {
+      "seed_file": "science_seeds.jsonl",
+      "description": "Canonical scientific laws, concepts, and definitions",
+      "bank_name": "science",
+      "required": true
+    },
+    "technology": {
+      "seed_file": "technology_seeds.jsonl",
+      "description": "Core technology concepts relevant to this system",
+      "bank_name": "technology",
+      "required": true
+    },
+    "language": {
+      "seed_file": "language_seeds.jsonl",
+      "description": "Grammar rules, tokenization rules, sentence types",
+      "bank_name": "language_arts",
+      "required": true
+    },
+    "working_theories": {
+      "seed_file": "working_theories_seeds.jsonl",
+      "description": "Causal patterns the system relies on",
+      "bank_name": "working_theories",
+      "required": true
+    },
+    "personal_system": {
+      "seed_file": "personal_system_seeds.jsonl",
+      "description": "Statements about what the system is, what the brains are, and rules they must follow",
+      "bank_name": "personal",
+      "required": true
+    },
+    "governance_rules": {
+      "seed_file": "governance_rules_seeds.jsonl",
+      "description": "Explicit governance rules (no randomness, determinism, Python-only, etc.)",
+      "bank_name": "governance_rules",
+      "required": true
+    },
+    "coding_patterns": {
+      "seed_file": "coding_patterns_seeds.jsonl",
+      "description": "Deterministic template patterns for functions, error handling, etc.",
+      "bank_name": "coding_patterns",
+      "required": true
+    },
+    "planning_patterns": {
+      "seed_file": "planning_patterns_seeds.jsonl",
+      "description": "How to break down tasks, constraints, sequencing",
+      "bank_name": "planning_patterns",
+      "required": true
+    },
+    "creative_templates": {
+      "seed_file": "creative_templates_seeds.jsonl",
+      "description": "Foundational creative patterns and templates",
+      "bank_name": "creative_templates",
+      "required": true
+    },
+    "environment_rules": {
+      "seed_file": "environment_rules_seeds.jsonl",
+      "description": "Environmental constraints and context rules",
+      "bank_name": "environment_rules",
+      "required": true
+    },
+    "conflict_resolution_patterns": {
+      "seed_file": "conflict_resolution_patterns_seeds.jsonl",
+      "description": "Patterns for resolving conflicts and contradictions",
+      "bank_name": "conflict_resolution_patterns",
+      "required": true
+    }
+  }
+}

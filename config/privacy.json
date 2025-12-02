@@ -1,0 +1,7 @@
+{
+  "personal_identity": {
+    "default_retention": "session",
+    "ask_consent_on_identity": false,
+    "session_ttl_minutes": 240
+  }
+}

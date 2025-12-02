@@ -1,0 +1,364 @@
+{
+  "abstraction_brain": {
+    "module": "brains/cognitive/abstraction/service/abstraction_brain.py",
+    "role": "diagnostic",
+    "status": "implemented",
+    "ops": [
+      "CREATE_CONCEPT",
+      "HEALTH",
+      "QUERY_CONCEPT",
+      "UPDATE_CONCEPT"
+    ]
+  },
+  "affect_priority_brain": {
+    "module": "brains/cognitive/affect_priority/service/affect_priority_brain.py",
+    "role": "diagnostic",
+    "status": "implemented",
+    "ops": [
+      "HEALTH",
+      "LEARN_FROM_RUN",
+      "SCORE"
+    ]
+  },
+  "autonomy_brain": {
+    "module": "brains/cognitive/autonomy/service/autonomy_brain.py",
+    "role": "core",
+    "status": "partial",
+    "ops": [
+      "HEALTH",
+      "TICK"
+    ]
+  },
+  "coder_brain": {
+    "module": "brains/cognitive/coder/service/coder_brain.py",
+    "role": "specialist",
+    "status": "partial",
+    "ops": [
+      "EXECUTE_STEP",
+      "GENERATE",
+      "PLAN",
+      "REFINE",
+      "VERIFY"
+    ]
+  },
+  "committee_brain": {
+    "module": "brains/cognitive/committee/service/committee_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "CONSULT",
+      "EXECUTE_STEP"
+    ]
+  },
+  "environment_brain": {
+    "module": "brains/cognitive/environment_context/service/environment_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "GET_LOCATION"
+    ]
+  },
+  "imaginer_brain": {
+    "module": "brains/cognitive/imaginer/service/imaginer_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "EXECUTE_STEP",
+      "HYPOTHESIZE"
+    ]
+  },
+  "integrator_brain": {
+    "module": "brains/cognitive/integrator/service/integrator_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "RESOLVE",
+      "STATE"
+    ]
+  },
+  "language_brain": {
+    "module": "brains/cognitive/language/service/language_brain.py",
+    "role": "core",
+    "status": "partial",
+    "ops": [
+      "EXECUTE_STEP",
+      "FINALIZE",
+      "GENERATE_CANDIDATES",
+      "HEALTH",
+      "PARSE"
+    ]
+  },
+  "memory_librarian": {
+    "module": "brains/cognitive/memory_librarian/service/memory_librarian.py",
+    "role": "core",
+    "status": "partial",
+    "ops": [
+      "ALIGNMENT_APPLY",
+      "ALIGNMENT_AUDIT",
+      "ALIGNMENT_PROPOSE",
+      "BB_SUBSCRIBE",
+      "BRAIN_GET",
+      "BRAIN_MERGE",
+      "BRAIN_PUT",
+      "CONSOLIDATE_PREFERENCES",
+      "CONTROL_CYCLE",
+      "CONTROL_TICK",
+      "CORRECT",
+      "CREATE_CONCEPT",
+      "DETECT_SKILLS",
+      "DISABLE_TRACER",
+      "ENABLE_TRACER",
+      "EXTRACT_PATTERNS",
+      "HEALTH",
+      "HEALTH_CHECK",
+      "MEMORY_HEALTH_SUMMARY",
+      "PROCESS_EVENTS",
+      "RUN_PIPELINE",
+      "SET_ROTATION_LIMITS",
+      "UNIFIED_RETRIEVE",
+      "WM_DUMP",
+      "WM_GET",
+      "WM_PUT"
+    ]
+  },
+  "motivation_brain": {
+    "module": "brains/cognitive/motivation/service/motivation_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "ADJUST_STATE",
+      "EVALUATE_QUERY",
+      "FORMULATE_GOALS",
+      "GET_STATE",
+      "SCORE_DRIVE",
+      "SCORE_OPPORTUNITIES"
+    ]
+  },
+  "pattern_recognition_brain": {
+    "module": "brains/cognitive/pattern_recognition/service/pattern_recognition_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "ANALYZE",
+      "EXTRACT_PATTERNS",
+      "HEALTH"
+    ]
+  },
+  "peer_connection_brain": {
+    "module": "brains/cognitive/peer_connection/service/peer_connection_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "ASK",
+      "CONNECT",
+      "DELEGATE"
+    ]
+  },
+  "personality_brain": {
+    "module": "brains/cognitive/personality/service/personality_brain.py",
+    "role": "diagnostic",
+    "status": "implemented",
+    "ops": [
+      "ADAPT_WEIGHTS_SUGGEST",
+      "HEALTH",
+      "LEARN_FROM_RUN",
+      "PREFERENCES_SNAPSHOT"
+    ]
+  },
+  "planner_brain": {
+    "module": "brains/cognitive/planner/service/planner_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "DECOMPOSE_TASK",
+      "EXECUTE_STEP",
+      "HEALTH",
+      "PLAN",
+      "PLAN_FROM_WM"
+    ]
+  },
+  "replanner_brain": {
+    "module": "brains/cognitive/planner/service/replanner_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": []
+  },
+  "reasoning_brain": {
+    "module": "brains/cognitive/reasoning/service/reasoning_brain.py",
+    "role": "core",
+    "status": "partial",
+    "ops": [
+      "EVALUATE_FACT",
+      "EXECUTE_STEP",
+      "EXPLAIN_LAST",
+      "GENERATE_THOUGHTS",
+      "HEALTH"
+    ]
+  },
+  "self_dmn_brain": {
+    "module": "brains/cognitive/self_dmn/service/self_dmn_brain.py",
+    "role": "core",
+    "status": "partial",
+    "ops": [
+      "ANALYZE_INTERNAL",
+      "DISSENT_SCAN",
+      "DRAFT_REFLECTIONS",
+      "HEALTH",
+      "REFLECT",
+      "REFLECT_ON_ERROR",
+      "REGISTER",
+      "RUN_IDLE_CYCLE",
+      "RUN_LONG_TERM_REFLECTION",
+      "TICK"
+    ]
+  },
+  "self_model_brain": {
+    "module": "brains/cognitive/self_model/service/self_model_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "CAN_ANSWER",
+      "DESCRIBE_SELF",
+      "GET_CAPABILITIES",
+      "GET_LIMITATIONS",
+      "QUERY_SELF",
+      "UPDATE_SELF_FACTS"
+    ]
+  },
+  "self_review_brain": {
+    "module": "brains/cognitive/self_review/service/self_review_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "RECOMMEND_TUNING",
+      "REVIEW_TURN"
+    ]
+  },
+  "hearing_brain": {
+    "module": "brains/cognitive/sensorium/service/hearing_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "ANALYZE_AUDIO"
+    ]
+  },
+  "sensorium_brain": {
+    "module": "brains/cognitive/sensorium/service/sensorium_brain.py",
+    "role": "diagnostic",
+    "status": "implemented",
+    "ops": [
+      "HEALTH",
+      "NORMALIZE"
+    ]
+  },
+  "vision_brain": {
+    "module": "brains/cognitive/sensorium/service/vision_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "ANALYZE_IMAGE"
+    ]
+  },
+  "system_history_brain": {
+    "module": "brains/cognitive/system_history/service/system_history_brain.py",
+    "role": "diagnostic",
+    "status": "implemented",
+    "ops": [
+      "HEALTH",
+      "LOG_REFLECTIONS",
+      "SUMMARIZE"
+    ]
+  },
+  "thought_synthesizer": {
+    "module": "brains/cognitive/thought_synthesis/service/thought_synthesizer.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "HEALTH",
+      "SYNTHESIZE"
+    ]
+  },
+  "council_brain": {
+    "module": "brains/governance/council/service/council_brain.py",
+    "role": "specialist",
+    "status": "implemented",
+    "ops": [
+      "ARBITRATE",
+      "DOMAIN_BANK_SEED_APPLY",
+      "DOMAIN_BANK_SEED_VALIDATE",
+      "TASK_EXECUTE",
+      "TASK_EXECUTE_WITH_TRACE"
+    ]
+  },
+  "personal_brain": {
+    "module": "brains/personal/service/personal_brain.py",
+    "role": "core",
+    "status": "implemented",
+    "ops": [
+      "ADD_FACT",
+      "ADD_GOAL",
+      "ADD_RELATION",
+      "ADD_RULE",
+      "ADD_SAFETY_RULE",
+      "ADD_SYNONYM",
+      "COMPLETE_GOAL",
+      "DOMAIN_STATS",
+      "EXPORT",
+      "EXPORT_FACTS",
+      "EXPORT_SYNONYMS",
+      "FACT_COUNT",
+      "GET_ATTRIBUTE",
+      "GET_CANONICAL",
+      "GET_GOAL",
+      "GET_GOALS",
+      "GET_GOAL_TREE",
+      "GET_MOOD",
+      "GET_PROFILE",
+      "GOAL_DEPENDENCIES",
+      "GOAL_SUMMARY",
+      "GROUP_KG_BY_RELATION",
+      "HEALTH",
+      "IMPORT_FACTS",
+      "IMPORT_SYNONYMS",
+      "INTROSPECT",
+      "LIST_FACTS",
+      "LIST_RELATIONS",
+      "LIST_RULES",
+      "LIST_SAFETY_RULES",
+      "LIST_SYNONYMS",
+      "LIST_SYNONYM_GROUPS",
+      "META_CONFIDENCE",
+      "META_TRENDS",
+      "QUERY_FACT",
+      "QUERY_RELATION",
+      "RECORD_DISLIKE",
+      "RECORD_LIKE",
+      "REINFORCE",
+      "REMOVE_FACT",
+      "REMOVE_RELATION",
+      "REMOVE_SYNONYM",
+      "RESET_MOOD",
+      "RESET_SAFETY_RULES",
+      "RESET_USER_KNOWLEDGE",
+      "RUN_INFERENCE",
+      "SCORE_BOOST",
+      "SEARCH_KG",
+      "SEARCH_KG_CANONICAL",
+      "SEARCH_QA",
+      "SEARCH_QA_CANONICAL",
+      "SEARCH_SYNONYMS",
+      "SET_DEADLINE",
+      "SET_PRIVACY",
+      "SUMMARIZE_QA",
+      "TOPIC_STATS",
+      "TOPIC_TRENDS",
+      "TOP_LIKES",
+      "UPDATE_FACT",
+      "UPDATE_MOOD",
+      "UPDATE_PROFILE",
+      "UPDATE_PROGRESS",
+      "USER_KNOWLEDGE_STATS",
+      "WHY"
+    ]
+  }
+}

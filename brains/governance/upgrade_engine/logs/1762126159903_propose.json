@@ -1,0 +1,11 @@
+{
+  "event": "propose",
+  "timestamp": 1762126159903,
+  "data": {
+    "id": "UPG-1762126159902",
+    "description": "test upgrade",
+    "target": "sensorium",
+    "timestamp": 1762126159902,
+    "status": "pending"
+  }
+}

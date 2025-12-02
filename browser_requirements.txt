@@ -1,0 +1,16 @@
+# Browser Runtime Dependencies
+# ============================
+
+# Core browser automation
+playwright==1.40.0
+
+# Web server for RPC API
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# HTTP client
+httpx==0.25.2
+
+# Utilities
+python-dotenv==1.0.0

@@ -1,0 +1,9 @@
+{
+    "remote_name": "github",
+    "repo_url": "https://github.com/hinkle360-ux/maven-for-maven.git",
+    "token_env_var": "MAVEN_GITHUB_TOKEN",
+    "default_branch": "main",
+    "auto_push": false,
+    "commit_author": "Maven AI",
+    "commit_email": "maven@localhost"
+}

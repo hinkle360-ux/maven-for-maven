@@ -1,0 +1,6 @@
+{
+  "denies_ratio": 0.05,
+  "min_explain_bias": 0.0,
+  "max_verbosity_bias": 0.0,
+  "max_parse_priority": 0.0
+}

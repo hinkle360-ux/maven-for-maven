@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "provider": "ollama",
+  "ollama_url": "http://localhost:11434",
+  "model": "llama3.2",
+  "learning": {
+    "enabled": true,
+    "min_interactions_to_learn": 10,
+    "similarity_threshold": 0.8,
+    "min_pattern_occurrences": 3
+  },
+  "usage": {
+    "nlu": false,
+    "context_resolution": true,
+    "generation": true,
+    "critique": false
+  },
+  "fallback_strategy": "template",
+  "scheduling": {
+    "learning_time": "02:00",
+    "learning_enabled": true
+  }
+}

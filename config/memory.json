@@ -1,0 +1,34 @@
+{
+  "memory": {
+    "stm_capacity": 20000,
+    "mtm_capacity": 100000,
+    "ltm_capacity": 500000,
+    "rotation_policy": "capacity_based",
+    "auto_consolidate": true
+  },
+  "episodic_memory": {
+    "enabled": true,
+    "auto_episode_creation": true,
+    "episode_close_on_session_end": true,
+    "max_turns_per_episode": 100,
+    "ltm_summarization_days": 7
+  },
+  "vector_index": {
+    "enabled": true,
+    "backend": "sqlite",
+    "dimension": 384,
+    "min_similarity_score": 0.3
+  },
+  "session_management": {
+    "enabled": true,
+    "persist_identity": true,
+    "cross_session_retrieval": true
+  },
+  "context_bundle": {
+    "stm_limit": 10,
+    "mtm_limit": 10,
+    "ltm_limit": 5,
+    "episodic_limit": 5,
+    "vector_limit": 5
+  }
+}

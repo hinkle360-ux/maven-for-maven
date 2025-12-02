@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "action": "WRITE_GOLDEN",
+      "effect": "DENY",
+      "reason": "Golden templates are immutable."
+    },
+    {
+      "action": "INIT_GOLDEN_FROM_BASELINE",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "LOAD_CANDIDATE",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "CANARY_TEST",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "PROMOTE_TEMPLATE",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "ROLLBACK_TEMPLATE",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "ROLLBACK_TO_GOLDEN",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "REPAIR_BRAIN",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "REPAIR_HEALTHCHECK",
+      "effect": "REVIEW"
+    },
+    {
+      "action": "REASONING_VERDICT",
+      "effect": "AUDIT"
+    },
+    {
+      "action": "LIBRARIAN_STORE",
+      "effect": "AUDIT"
+    }
+    ,
+    {
+      "action": "OVERWRITE_ACTIVE_TEMPLATE",
+      "effect": "DENY",
+      "reason": "Active templates must not be overwritten without review."
+    }
+    ,
+    {
+      "action": "WRITE_ACTIVE_TEMPLATE",
+      "subject": "cognitive_brain",
+      "effect": "DENY",
+      "reason": "Active templates cannot be modified directly by brain modules."
+    }
+    ,
+    {
+      "action": "DELETE_TEMPLATE",
+      "subject": "any",
+      "effect": "DENY",
+      "reason": "Templates cannot be deleted; use Repair Engine to rollback."
+    }
+    ,
+    {
+      "action": "REBUILD_INDEX",
+      "subject": "domain_bank",
+      "effect": "ALLOW_AUDIT",
+      "reason": "Banks may rebuild their search indexes offline."
+    }
+    ,
+    {
+      "action": "COMPACT_COLD",
+      "subject": "domain_bank",
+      "effect": "REVIEW",
+      "reason": "Cold compaction may permanently alter archived data."
+    }
+    ,
+    {
+      "action": "SET_ROTATION_LIMITS",
+      "subject": "system",
+      "effect": "REVIEW",
+      "reason": "Modifying rotation limits must be reviewed."
+    }
+    ,
+    {
+      "action": "RUN_TEST_SUITE",
+      "subject": "system",
+      "effect": "ALLOW_AUDIT",
+      "reason": "Test suites may run offline and are subject to audit."
+    }
+    ,
+    {
+      "action": "ENABLE_TRACER",
+      "subject": "system",
+      "effect": "ALLOW",
+      "reason": "Pipeline tracing can be toggled on for debugging."
+    }
+    ,
+    {
+      "action": "DISABLE_TRACER",
+      "subject": "system",
+      "effect": "ALLOW",
+      "reason": "Pipeline tracing can be toggled off to reduce logging."
+    }
+  ],
+  "default_effect": "ALLOW_AUDIT"
+}

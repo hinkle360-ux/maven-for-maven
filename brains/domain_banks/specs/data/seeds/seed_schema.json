@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://maven.system/schemas/domain-bank-seed-entry.json",
+  "title": "Domain Bank Seed Entry Schema",
+  "description": "Schema for domain bank seed entries. Each seed entry represents a foundational piece of knowledge for a specific domain bank.",
+  "version": "1.0.0",
+
+  "type": "object",
+  "required": ["id", "bank", "kind", "content", "tier"],
+  "additionalProperties": false,
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this entry within its bank. Format: {bank}:{kind}:{slug}",
+      "pattern": "^[a-z_]+:[a-z_]+:[a-z0-9_]+$",
+      "examples": ["science:law:thermodynamics_2", "coding_patterns:error_handling:try_except_pattern"]
+    },
+
+    "bank": {
+      "type": "string",
+      "description": "The domain bank this entry belongs to",
+      "enum": [
+        "science",
+        "technology",
+        "language_arts",
+        "working_theories",
+        "personal",
+        "governance_rules",
+        "coding_patterns",
+        "planning_patterns",
+        "creative_templates",
+        "environment_rules",
+        "conflict_resolution_patterns"
+      ]
+    },
+
+    "kind": {
+      "type": "string",
+      "description": "The type/category of this entry within its bank",
+      "enum": [
+        "law",
+        "concept",
+        "definition",
+        "principle",
+        "rule",
+        "pattern",
+        "template",
+        "constraint",
+        "theory",
+        "fact",
+        "guideline",
+        "strategy",
+        "heuristic"
+      ]
+    },
+
+    "content": {
+      "type": "object",
+      "description": "The actual knowledge content of this entry",
+      "required": ["title", "description"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Short title or name for this entry",
+          "minLength": 3,
+          "maxLength": 200
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description or explanation",
+          "minLength": 10
+        },
+        "tags": {
+          "type": "array",
+          "description": "Optional tags for categorization and lookup",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "uniqueItems": true
+        },
+        "examples": {
+          "type": "array",
+          "description": "Optional examples demonstrating this entry",
+          "items": {
+            "type": "string"
+          }
+        },
+        "related_ids": {
+          "type": "array",
+          "description": "IDs of related entries in any bank",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z_]+:[a-z_]+:[a-z0-9_]+$"
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Optional additional metadata",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "tier": {
+      "type": "string",
+      "description": "Memory tier for this seed entry (seeds always go to LTM)",
+      "enum": ["ltm"],
+      "const": "ltm"
+    },
+
+    "confidence": {
+      "type": "number",
+      "description": "Confidence level for this entry (0.0-1.0). Seeds default to 1.0",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "default": 1.0
+    },
+
+    "source": {
+      "type": "string",
+      "description": "Source or origin of this knowledge (for seeds, always 'seed')",
+      "const": "seed"
+    },
+
+    "deterministic": {
+      "type": "boolean",
+      "description": "Whether this entry represents deterministic knowledge",
+      "default": true
+    }
+  },
+
+  "examples": [
+    {
+      "id": "science:law:thermodynamics_2",
+      "bank": "science",
+      "kind": "law",
+      "content": {
+        "title": "Second Law of Thermodynamics",
+        "description": "The total entropy of an isolated system can never decrease over time. Entropy can only increase or remain constant in ideal reversible processes.",
+        "tags": ["thermodynamics", "entropy", "physics"],
+        "related_ids": ["science:law:thermodynamics_1"]
+      },
+      "tier": "ltm",
+      "confidence": 1.0,
+      "source": "seed",
+      "deterministic": true
+    },
+    {
+      "id": "coding_patterns:error_handling:try_except_basic",
+      "bank": "coding_patterns",
+      "kind": "pattern",
+      "content": {
+        "title": "Basic Try-Except Pattern",
+        "description": "Deterministic error handling using try-except blocks with specific exception types and explicit error messages.",
+        "examples": [
+          "try:\\n    result = operation()\\n    return {'ok': True, 'payload': result}\\nexcept SpecificError as e:\\n    return {'ok': False, 'error': str(e)}"
+        ],
+        "tags": ["error_handling", "python", "deterministic"]
+      },
+      "tier": "ltm",
+      "confidence": 1.0,
+      "source": "seed",
+      "deterministic": true
+    }
+  ]
+}

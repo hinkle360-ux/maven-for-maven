@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maven Configuration Schema",
+  "description": "A unified schema describing configuration options for the Maven cognitive architecture."
+    ,
+  "type": "object",
+  "properties": {
+    "wm": {
+      "type": "object",
+      "description": "Working memory configuration",
+      "properties": {
+        "persist": {
+          "type": "boolean",
+          "description": "Persist working memory entries to disk",
+          "default": true
+        },
+        "arbitration": {
+          "type": "boolean",
+          "description": "Enable arbitration scoring for WM_GET",
+          "default": true
+        },
+        "nudge": {
+          "type": "boolean",
+          "description": "Enable attention nudge based on WM events",
+          "default": false
+        },
+        "plan_handshake": {
+          "type": "boolean",
+          "description": "Enable plan handshake from WM events to planner",
+          "default": false
+        }
+      },
+      "required": ["persist", "arbitration"]
+    },
+    "motivation": {
+      "type": "object",
+      "description": "Motivation brain configuration",
+      "properties": {
+        "base_drive": {
+          "type": "number",
+          "description": "Baseline drive level",
+          "default": 0.5
+        },
+        "curiosity_weight": {
+          "type": "number",
+          "description": "Weight assigned to curiosity in computing drive",
+          "default": 0.3
+        },
+        "fatigue_decay": {
+          "type": "number",
+          "description": "Decay rate for fatigue over time",
+          "default": 0.1
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

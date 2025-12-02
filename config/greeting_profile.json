@@ -1,0 +1,18 @@
+{
+  "formal": [
+    "Hello! It's great to meet you.",
+    "Good day! How are you?"
+  ],
+  "friendly": [
+    "Hi there! I'm happy you're here.",
+    "Hey! How's your day going?"
+  ],
+  "calm": [
+    "Hello. Hope you're doing okay today.",
+    "Hi! I'm here if you need help."
+  ],
+  "excited": [
+    "Hey hey! So good to see you!",
+    "Hi! I can't wait to get started!"
+  ]
+}

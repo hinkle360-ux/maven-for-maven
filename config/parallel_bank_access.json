@@ -1,0 +1,6 @@
+{
+  "parallel_bank_access": {
+    "enabled": true,
+    "max_workers": 5
+  }
+}

@@ -1,0 +1,14 @@
+# Maven Full Requirements
+# ========================
+#
+# This file includes all requirements for running Maven with full capabilities.
+# For minimal/offline mode, use only requirements_core.txt.
+
+# Core requirements (stdlib-only)
+-r requirements_core.txt
+
+# Host tools requirements (for external I/O)
+-r requirements_host_tools.txt
+
+# Development requirements (for testing/linting)
+# -r requirements_dev.txt

@@ -1,0 +1,26 @@
+# Maven Host Tools Requirements
+# ==============================
+#
+# These are the requirements for the host_tools package,
+# which provides concrete implementations of the tool interfaces.
+#
+# Install these only when running Maven with full external I/O capabilities.
+# Core brains can run without these packages.
+
+# HTTP clients (optional, urllib from stdlib is used by default)
+# httpx>=0.25.0
+
+# LLM APIs (optional, for OpenAI integration)
+# openai>=1.0.0
+
+# Browser automation (optional, for browser_runtime)
+# playwright>=1.40.0
+# playwright-stealth>=1.0.0  # Anti-bot-detection for search engines
+
+# Web server (optional, for browser_runtime server)
+# fastapi>=0.104.0
+# uvicorn>=0.24.0
+
+# Utilities
+# python-dotenv>=1.0.0
+# pydantic>=2.0.0

@@ -1,0 +1,6 @@
+commit=daef074
+branch=claude/verify-project-structure-01Fo1km3NbU1msMVHJZQ9hMZ
+features=teacher_learning,routing_learning,routing_cache,tier_memory,canonical_pipeline,teacher_escalation_fix,learning_mode,strategy_reasoning
+ENABLE_WEB_RESEARCH=True
+WEB_RESEARCH_MAX_SECONDS=1200
+WEB_RESEARCH_MAX_REQUESTS=20

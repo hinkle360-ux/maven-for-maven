@@ -1,0 +1,17 @@
+{
+  "missing_file": {
+    "action": "touch"
+  },
+  "missing_dir": {
+    "action": "mkdirs"
+  },
+  "corrupt_jsonl": {
+    "action": "backup_and_clear"
+  },
+  "memory_overflow": {
+    "action": "rotate_to_mtm"
+  },
+  "missing_bank": {
+    "action": "rebuild_bank"
+  }
+}

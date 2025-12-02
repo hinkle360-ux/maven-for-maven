@@ -1,0 +1,4 @@
+{
+  "max_rollouts": 5,
+  "proofs_required": true
+}

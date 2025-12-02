@@ -1,0 +1,13 @@
+{
+  "blackboard": {
+    "enabled": true,
+    "mode": "assist",
+    "tick_budget": 128,
+    "wm_size": 2048,
+    "max_events": 4096,
+    "max_steps": 64,
+    "max_events_per_tick": 50,
+    "max_runtime_ms": 150,
+    "starvation_guard": true
+  }
+}

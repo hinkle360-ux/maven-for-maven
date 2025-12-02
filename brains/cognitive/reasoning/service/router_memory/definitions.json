@@ -1,0 +1,36 @@
+{
+  "a circle": {
+    "round shape": 5
+  },
+  "a dog": {
+    "n animal": 5
+  },
+  "a cat": {
+    "n animal": 5
+  },
+  "a bird": {
+    "n animal": 5
+  },
+  "dogs": {
+    "mammals": 2
+  },
+  "the sky": {
+    "blue": 23,
+    "green": 1
+  },
+  "paris": {
+    "the capital of france": 6
+  },
+  "the grass": {
+    "green": 1
+  },
+  "squirrels": {
+    "mammals": 1
+  },
+  "red": {
+    "color": 1
+  },
+  "the earth": {
+    "round": 1
+  }
+}

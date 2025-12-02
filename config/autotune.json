@@ -1,0 +1,9 @@
+{
+  "rotation": {
+    "stm_records": 50,
+    "hard_headroom": 20
+  },
+  "governance": {
+    "auto_repair": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "filesystem_agency": true,
+  "git_agency": true,
+  "execution_agency": true,
+  "shell_agency": true,
+  "python_agency": true,
+  "hot_reload": false,
+  "teacher_learning": true,
+  "routing_learning": true,
+  "web_research": true,
+  "browser_runtime": true,
+  "autonomous_agents": false,
+  "teacher_direct_fact_write": false,
+  "teacher_proposal_mode": true,
+  "capability_startup_scan": true,
+  "full_agency_mode": false
+}

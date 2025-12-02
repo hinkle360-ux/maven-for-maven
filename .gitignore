@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime reports and logs
+reports/
+context_snapshot.json
+health.json
+query_log.jsonl
+
+# Learning and memory artifacts
+**/memory/**/records.jsonl
+**/memory/**/aggregate.json
+**/service/index.json
+weights.json
+**/identity_snapshot.json
+runtime_memory/
+# Ignore runtime memory artifacts by default
+brains/**/memory/*
+!brains/**/memory/.gitkeep
+# Allow code modules within the top-level brains/memory package while still
+# ignoring runtime memory artifacts elsewhere.
+!brains/memory/
+!brains/memory/*.py
+brains/**/system_history/archive*/
+brains/**/system_history/baseline_*/
+
+# Runtime traces and stores
+*_trace.jsonl
+*_store.jsonl
+wm_store.jsonl
+wm_trace.jsonl
+user_knowledge.json
+user_mood.json
+
+# Archives (preserved outside git)
+archive/
+
+# Sandbox workspace (ephemeral patch testing - keep README only)
+sandbox_workspace/*
+!sandbox_workspace/README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files (contain API keys - never commit!)
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,24 @@
+{
+  "enable": true,
+  "max_ticks_per_run": 10,
+  "max_goals": 10,
+  "rate_limit_minutes": 0,
+  "priority_strategy": "priority",
+  "replan_age_minutes": 1440,
+  "execution_budget": -1,
+  "allowed_tools": [
+    "search_memory", "search_kg", "math_compute", "web_search", "code_execute", "file_read", "storage_write"
+  ],
+  "denied_tools": [
+    "delete_data"  
+  ],
+  "budget_governors": {
+    "max_goals_per_run": 5,
+    "max_duration_hours": 1
+  },
+  "kill_switch": false
+  ,
+  "self_model_path": "brains/personal/memory/self_model.json",
+  "allow_self_updates": false,
+  "personality_projection": "standard"
+}

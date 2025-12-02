@@ -1,0 +1,38 @@
+{
+  "description": "Task specification schema for agent operations.",
+  "type": "object",
+  "properties": {
+    "edits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "new_text": { "type": "string" },
+          "selectors": { "type": ["string", "null"] }
+        },
+        "required": ["path", "new_text"],
+        "additionalProperties": true
+      }
+    },
+    "run": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cmd": { "type": "string" }
+        },
+        "required": ["cmd"],
+        "additionalProperties": true
+      }
+    },
+    "depends_on": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "priority": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

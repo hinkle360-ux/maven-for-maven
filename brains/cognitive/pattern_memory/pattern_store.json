@@ -1,0 +1,766 @@
+{
+  "patterns": [
+    {
+      "id": "9a9d233a17a058d0",
+      "brain": "integrator",
+      "signature": "direct_question:what_is",
+      "context_tags": [
+        "direct_question",
+        "factual"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "AFFECT_PRIORITY",
+          "INTEGRATOR",
+          "REASONING",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": []
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271696,
+      "frozen": false
+    },
+    {
+      "id": "0bc6925ae34040ce",
+      "brain": "integrator",
+      "signature": "direct_question:how_to",
+      "context_tags": [
+        "direct_question",
+        "instructional"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "AFFECT_PRIORITY",
+          "INTEGRATOR",
+          "RESEARCH_MANAGER",
+          "REASONING",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": []
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271746,
+      "frozen": false
+    },
+    {
+      "id": "d49b908e308ba10e",
+      "brain": "integrator",
+      "signature": "self_diag:diagnose_web",
+      "context_tags": [
+        "self_diag",
+        "meta"
+      ],
+      "action": {
+        "pipeline": [
+          "SELF_MODEL"
+        ],
+        "force_teacher": false,
+        "skip_brains": [
+          "SENSORIUM",
+          "REASONING"
+        ]
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271774,
+      "frozen": false
+    },
+    {
+      "id": "d60d216f787bb3e6",
+      "brain": "integrator",
+      "signature": "tool_call:pc_scan",
+      "context_tags": [
+        "tool_call",
+        "action"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "ACTION_ENGINE",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": [
+          "REASONING"
+        ]
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271803,
+      "frozen": false
+    },
+    {
+      "id": "02f9900ce85ced8a",
+      "brain": "integrator",
+      "signature": "casual_statement",
+      "context_tags": [
+        "casual",
+        "social"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "AFFECT_PRIORITY",
+          "LANGUAGE"
+        ],
+        "force_teacher": false,
+        "skip_brains": [
+          "RESEARCH_MANAGER",
+          "REASONING"
+        ]
+      },
+      "score": 0.2,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.427183,
+      "frozen": false
+    },
+    {
+      "id": "48f353b17825832d",
+      "brain": "integrator",
+      "signature": "research_command:deep",
+      "context_tags": [
+        "research",
+        "explicit"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "AFFECT_PRIORITY",
+          "RESEARCH_MANAGER",
+          "REASONING",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": []
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.427185,
+      "frozen": false
+    },
+    {
+      "id": "01c4f8088549d267",
+      "brain": "integrator",
+      "signature": "contradiction_detected",
+      "context_tags": [
+        "contradiction",
+        "safety"
+      ],
+      "action": {
+        "pipeline": [
+          "REASONING",
+          "TEACHER",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": true,
+        "skip_brains": []
+      },
+      "score": 0.8,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271877,
+      "frozen": true
+    },
+    {
+      "id": "1d69a7eaba836f83",
+      "brain": "integrator",
+      "signature": "unanswered_question",
+      "context_tags": [
+        "unanswered",
+        "safety"
+      ],
+      "action": {
+        "pipeline": [
+          "LANGUAGE",
+          "REASONING",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": []
+      },
+      "score": 0.7,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.427193,
+      "frozen": true
+    },
+    {
+      "id": "9ef0eba9f7249d21",
+      "brain": "integrator",
+      "signature": "multi_brain_conflict",
+      "context_tags": [
+        "conflict",
+        "complex"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "INTEGRATOR",
+          "REASONING",
+          "TEACHER",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": true,
+        "skip_brains": []
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4271953,
+      "frozen": false
+    },
+    {
+      "id": "9c5f818181a11298",
+      "brain": "integrator",
+      "signature": "default",
+      "context_tags": [
+        "fallback"
+      ],
+      "action": {
+        "pipeline": [
+          "SENSORIUM",
+          "AFFECT_PRIORITY",
+          "INTEGRATOR",
+          "REASONING",
+          "SELF_REVIEW"
+        ],
+        "force_teacher": false,
+        "skip_brains": []
+      },
+      "score": 0.0,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.427198,
+      "frozen": true
+    },
+    {
+      "id": "33bc6bc953a3a79a",
+      "brain": "affect_priority",
+      "signature": "high_stress+direct_question",
+      "context_tags": [
+        "high_stress",
+        "direct_question",
+        "safety"
+      ],
+      "action": {
+        "tone": "de-escalating",
+        "max_length": "normal",
+        "extra_teacher_checks": 1,
+        "force_self_review_mode": "deep"
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.435011,
+      "frozen": false
+    },
+    {
+      "id": "235db869bc4165dd",
+      "brain": "affect_priority",
+      "signature": "high_stress+self_blame",
+      "context_tags": [
+        "high_stress",
+        "self_blame",
+        "safety"
+      ],
+      "action": {
+        "tone": "supportive",
+        "max_length": "extended",
+        "extra_teacher_checks": 2,
+        "force_self_review_mode": "deep"
+      },
+      "score": 0.8,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350204,
+      "frozen": true
+    },
+    {
+      "id": "ee7ebecb9e10937b",
+      "brain": "affect_priority",
+      "signature": "neutral+research_command",
+      "context_tags": [
+        "neutral",
+        "research",
+        "technical"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "extended",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350228,
+      "frozen": false
+    },
+    {
+      "id": "c2494d7cddfd91b1",
+      "brain": "affect_priority",
+      "signature": "urgent",
+      "context_tags": [
+        "urgent",
+        "high_arousal"
+      ],
+      "action": {
+        "tone": "blunt",
+        "max_length": "short",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350247,
+      "frozen": false
+    },
+    {
+      "id": "97997ca1f08b3fdd",
+      "brain": "affect_priority",
+      "signature": "positive",
+      "context_tags": [
+        "positive",
+        "grateful"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "normal",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350266,
+      "frozen": false
+    },
+    {
+      "id": "0d80fc30c36af910",
+      "brain": "affect_priority",
+      "signature": "negative",
+      "context_tags": [
+        "negative",
+        "worried"
+      ],
+      "action": {
+        "tone": "de-escalating",
+        "max_length": "normal",
+        "extra_teacher_checks": 1,
+        "force_self_review_mode": "deep"
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350286,
+      "frozen": false
+    },
+    {
+      "id": "f855717265168785",
+      "brain": "affect_priority",
+      "signature": "default",
+      "context_tags": [
+        "fallback"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "normal",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.0,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4350302,
+      "frozen": true
+    },
+    {
+      "id": "84aa64b35347cad4",
+      "brain": "research_manager",
+      "signature": "explicit:deep+web",
+      "context_tags": [
+        "explicit",
+        "deep",
+        "web"
+      ],
+      "action": {
+        "depth": 4,
+        "web_enabled": true,
+        "time_budget_seconds": 180,
+        "max_web_requests": 5
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444394,
+      "frozen": false
+    },
+    {
+      "id": "9c0c24e6447480d2",
+      "brain": "research_manager",
+      "signature": "explicit:quick",
+      "context_tags": [
+        "explicit",
+        "quick"
+      ],
+      "action": {
+        "depth": 1,
+        "web_enabled": false,
+        "time_budget_seconds": 30,
+        "max_web_requests": 0
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.444442,
+      "frozen": false
+    },
+    {
+      "id": "ffcfaa8c2c4295b6",
+      "brain": "research_manager",
+      "signature": "topic:system_self_diagnostics",
+      "context_tags": [
+        "self_diag",
+        "internal"
+      ],
+      "action": {
+        "depth": 2,
+        "web_enabled": false,
+        "time_budget_seconds": 60,
+        "max_web_requests": 0
+      },
+      "score": 0.6,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444442,
+      "frozen": false
+    },
+    {
+      "id": "cb3328f7f800b666",
+      "brain": "research_manager",
+      "signature": "topic:science",
+      "context_tags": [
+        "science",
+        "factual"
+      ],
+      "action": {
+        "depth": 3,
+        "web_enabled": false,
+        "time_budget_seconds": 60,
+        "max_web_requests": 0
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444463,
+      "frozen": false
+    },
+    {
+      "id": "6bb36995b4b900d9",
+      "brain": "research_manager",
+      "signature": "topic:current_events",
+      "context_tags": [
+        "current",
+        "news",
+        "events"
+      ],
+      "action": {
+        "depth": 2,
+        "web_enabled": true,
+        "time_budget_seconds": 90,
+        "max_web_requests": 3
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.444448,
+      "frozen": false
+    },
+    {
+      "id": "929f5efdd1a7e8e0",
+      "brain": "research_manager",
+      "signature": "topic:technical_docs",
+      "context_tags": [
+        "technical",
+        "documentation"
+      ],
+      "action": {
+        "depth": 2,
+        "web_enabled": false,
+        "time_budget_seconds": 45,
+        "max_web_requests": 0
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444501,
+      "frozen": false
+    },
+    {
+      "id": "3794b367696c4cbb",
+      "brain": "research_manager",
+      "signature": "topic:trivial",
+      "context_tags": [
+        "trivial",
+        "simple"
+      ],
+      "action": {
+        "depth": 1,
+        "web_enabled": false,
+        "time_budget_seconds": 15,
+        "max_web_requests": 0
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444518,
+      "frozen": false
+    },
+    {
+      "id": "f3b57a30e0017b40",
+      "brain": "research_manager",
+      "signature": "topic:code",
+      "context_tags": [
+        "code",
+        "implementation"
+      ],
+      "action": {
+        "depth": 2,
+        "web_enabled": false,
+        "time_budget_seconds": 45,
+        "max_web_requests": 0
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444537,
+      "frozen": false
+    },
+    {
+      "id": "984f082898473d62",
+      "brain": "research_manager",
+      "signature": "default",
+      "context_tags": [
+        "fallback"
+      ],
+      "action": {
+        "depth": 2,
+        "web_enabled": false,
+        "time_budget_seconds": 60,
+        "max_web_requests": 0
+      },
+      "score": 0.0,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4444554,
+      "frozen": true
+    },
+    {
+      "id": "2e5c32ce7913261a",
+      "brain": "context_management",
+      "signature": "context:long_session",
+      "context_tags": [
+        "long_session",
+        "extended"
+      ],
+      "action": {
+        "decay_factor": 0.95,
+        "max_turns_in_context": 20,
+        "summary_trigger_threshold": 15
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548457,
+      "frozen": false
+    },
+    {
+      "id": "f4720d42ee034490",
+      "brain": "context_management",
+      "signature": "context:short_session",
+      "context_tags": [
+        "short_session",
+        "quick"
+      ],
+      "action": {
+        "decay_factor": 0.9,
+        "max_turns_in_context": 10,
+        "summary_trigger_threshold": 8
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548485,
+      "frozen": false
+    },
+    {
+      "id": "3fa20365ba6299f7",
+      "brain": "context_management",
+      "signature": "global:affect_decay",
+      "context_tags": [
+        "affect",
+        "emotional"
+      ],
+      "action": {
+        "decay_factor": 0.85,
+        "max_turns_in_context": 8,
+        "summary_trigger_threshold": 6
+      },
+      "score": 0.3,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548545,
+      "frozen": false
+    },
+    {
+      "id": "718521824c75d669",
+      "brain": "context_management",
+      "signature": "context:research_session",
+      "context_tags": [
+        "research",
+        "deep"
+      ],
+      "action": {
+        "decay_factor": 0.98,
+        "max_turns_in_context": 30,
+        "summary_trigger_threshold": 25
+      },
+      "score": 0.5,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548564,
+      "frozen": false
+    },
+    {
+      "id": "0a5d37ca089eb8c4",
+      "brain": "context_management",
+      "signature": "context:coding_session",
+      "context_tags": [
+        "coding",
+        "implementation"
+      ],
+      "action": {
+        "decay_factor": 0.93,
+        "max_turns_in_context": 18,
+        "summary_trigger_threshold": 15
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548583,
+      "frozen": false
+    },
+    {
+      "id": "53a5fc5b5fb621d7",
+      "brain": "context_management",
+      "signature": "global:answer_decay",
+      "context_tags": [
+        "answer",
+        "response"
+      ],
+      "action": {
+        "decay_factor": 0.88,
+        "max_turns_in_context": 12,
+        "summary_trigger_threshold": 10
+      },
+      "score": 0.4,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1763921417.4548523,
+      "frozen": false
+    },
+    {
+      "id": "eb785c5e6053feef",
+      "brain": "affect_priority",
+      "signature": "task_request",
+      "context_tags": [
+        "task",
+        "request"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "normal",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.34,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1764071480.4990916,
+      "frozen": false
+    },
+    {
+      "id": "56014821c6ddd609",
+      "brain": "context_management",
+      "signature": "global:default_decay",
+      "context_tags": [
+        "default",
+        "general"
+      ],
+      "action": {
+        "decay_factor": 0.92,
+        "max_turns_in_context": 15,
+        "summary_trigger_threshold": 12
+      },
+      "score": -0.13820488416152749,
+      "success_count": 2,
+      "failure_count": 3,
+      "last_updated": 1764251299.971982,
+      "frozen": false
+    },
+    {
+      "id": "d26f7b949bb086f9",
+      "brain": "affect_priority",
+      "signature": "small_talk",
+      "context_tags": [
+        "casual",
+        "low_arousal"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "short",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.005019019663430031,
+      "success_count": 5,
+      "failure_count": 1,
+      "last_updated": 1764430689.0826154,
+      "frozen": false
+    },
+    {
+      "id": "3f474a2e42e036d1",
+      "brain": "affect_priority",
+      "signature": "direct_question",
+      "context_tags": [
+        "direct_question",
+        "factual"
+      ],
+      "action": {
+        "tone": "neutral",
+        "max_length": "normal",
+        "extra_teacher_checks": 0,
+        "force_self_review_mode": "quick"
+      },
+      "score": 0.04267252714085163,
+      "success_count": 0,
+      "failure_count": 0,
+      "last_updated": 1764430711.6416512,
+      "frozen": false
+    }
+  ]
+}
